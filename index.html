@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Geral en Brasil · Guía de tomas</title>
+<style>
+:root{
+  --cream:#FFFDEE;
+  --green-100:#E2FBCE;
+  --lime:#E3EF26;
+  --teal:#076653;
+  --green-900:#0C342C;
+  --green-950:#06231D;
+  --ink:#10261F;
+  --muted:#5b7167;
+  --line:#cfe3d4;
+  --card:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--ink);
+  background:linear-gradient(160deg,#FFFDEE 0%,#F2FBE6 45%,#E2FBCE 100%);
+  line-height:1.55;
+}
+@page{size:A4;margin:12mm 11mm}
+.page{max-width:190mm;margin:0 auto}
+.pbreak{break-before:page}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(135deg,var(--green-950) 0%,var(--teal) 100%);
+  border-radius:22px;padding:30px 30px;color:var(--cream);
+  position:relative;overflow:hidden;box-shadow:0 14px 40px rgba(6,35,29,.28)}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:230px;height:230px;
+  background:radial-gradient(circle,rgba(227,239,38,.34),transparent 70%)}
+.hero .kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:800}
+.hero h1{font-size:34px;font-weight:900;margin:8px 0 4px;line-height:1.04;letter-spacing:-.5px;max-width:560px}
+.hero h1 span{color:var(--lime)}
+.hero .school{font-size:15px;color:#eafbe0;margin-top:6px;font-weight:700}
+.hero .sub{font-size:13.2px;color:#cdeede;max-width:590px;margin-top:9px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative;z-index:2}
+.hm{background:rgba(255,255,255,.10);border:1px solid rgba(227,239,38,.30);border-radius:30px;
+  padding:6px 14px;font-size:12px;color:#eafbe0}
+.hm b{color:var(--lime)}
+
+/* ── KPIs ── */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 15px;
+  box-shadow:0 3px 12px rgba(7,102,83,.07);border-top:4px solid var(--teal)}
+.kpi .k{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:800}
+.kpi .v{font-size:27px;font-weight:900;color:var(--green-900);letter-spacing:-.5px;margin-top:3px;line-height:1}
+.kpi .s{font-size:10.5px;color:var(--muted);margin-top:4px}
+.kpi.hl{border-top-color:var(--lime);background:linear-gradient(180deg,#fbffe9,#fff)}
+
+/* ── SECCIONES ── */
+section{margin-top:22px}
+.sec-head{display:flex;align-items:center;gap:12px;margin:0 0 12px;break-after:avoid}
+.sec-num{flex-shrink:0;width:40px;height:40px;border-radius:12px;background:var(--teal);color:var(--lime);
+  font-weight:900;font-size:16px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 5px 14px rgba(7,102,83,.35)}
+.sec-head h2{font-size:21px;font-weight:850;color:var(--green-900);letter-spacing:-.3px;line-height:1.15}
+.sec-head .tag{font-size:11px;color:var(--muted);font-weight:600;margin-top:1px}
+
+.lead{font-size:13.4px;color:#2c463c;background:var(--card);border:1px solid var(--line);
+  border-left:5px solid var(--lime);border-radius:12px;padding:12px 16px;margin-bottom:13px;break-inside:avoid}
+.lead b{color:var(--teal)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+  box-shadow:0 3px 12px rgba(7,102,83,.06);margin-bottom:12px;break-inside:avoid}
+.card h3{font-size:14.5px;color:var(--green-900);font-weight:800;margin-bottom:7px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.card p{font-size:12.3px;color:#33483f;margin-bottom:6px}
+.card ul{margin-left:16px}
+.card li{font-size:12px;color:#33483f;margin-bottom:3px;line-height:1.45}
+.card b{color:var(--green-900)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+
+/* ── PARTES ── */
+.part{padding:14px 20px;border-radius:16px;margin-bottom:4px;
+  background:linear-gradient(135deg,var(--green-900),#0f4a3c);color:var(--cream);
+  display:flex;align-items:center;gap:16px;break-after:avoid}
+.part .pn{font-size:30px;font-weight:900;color:var(--lime);line-height:1;min-width:48px}
+.part .pk{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:800}
+.part .pt{font-size:19px;font-weight:900;letter-spacing:-.2px;line-height:1.15}
+.part .pd{font-size:11.5px;color:#cdeede;margin-top:2px}
+
+/* ── EN 30 SEGUNDOS ── */
+.tldr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tl{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 13px;display:flex;gap:11px;
+  align-items:flex-start;break-inside:avoid;box-shadow:0 3px 12px rgba(7,102,83,.06)}
+.tl .ic{flex-shrink:0;width:34px;height:34px;border-radius:10px;background:var(--green-100);display:flex;
+  align-items:center;justify-content:center;font-size:17px}
+.tl h4{font-size:12.8px;color:var(--green-900);font-weight:850;margin-bottom:2px;line-height:1.25}
+.tl p{font-size:11.5px;color:#33483f;line-height:1.45}
+
+/* ── etiquetas de tipo ── */
+.lbl{display:inline-block;font-size:8.8px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
+  padding:2px 8px;border-radius:20px;vertical-align:middle;white-space:nowrap}
+.lbl.dec{background:var(--teal);color:var(--cream)}
+.lbl.pro{background:var(--lime);color:var(--green-950)}
+.lbl.inv{background:#dcefe4;color:var(--green-900);border:1px solid #b5d5c1}
+.lbl.pen{background:#fff8d6;color:#6b5a00;border:1px solid #e6d56a}
+
+/* ── destinos ── */
+.d{display:inline-block;font-size:8.6px;font-weight:800;letter-spacing:.4px;padding:1px 6px;border-radius:6px;
+  margin:1px 0 1px 3px;vertical-align:middle;white-space:nowrap}
+.d.cd{background:var(--teal);color:var(--cream)}
+.d.cf{background:var(--lime);color:var(--green-950)}
+.d.lf{background:var(--green-100);color:var(--green-900);border:1px solid #b5d5c1}
+.d.yt{background:var(--green-900);color:var(--lime)}
+.d.et{background:#fff;color:var(--teal);border:1px solid var(--teal)}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:10.3px;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 13px;margin-top:12px;break-inside:avoid}
+.legend b{color:var(--green-900)}
+.legend .grp{display:flex;flex-wrap:wrap;gap:5px 10px;align-items:center}
+
+/* ── tabla de texto ── */
+.mtable{width:100%;border-collapse:collapse;font-size:11.2px;background:var(--card);border-radius:14px;overflow:hidden;
+  box-shadow:0 3px 12px rgba(7,102,83,.07)}
+.mtable th{background:var(--green-900);color:var(--cream);padding:8px 9px;font-size:9.4px;text-transform:uppercase;
+  letter-spacing:.6px;text-align:left}
+.mtable td{padding:7px 9px;border-top:1px solid var(--line);color:#33483f;vertical-align:top;line-height:1.42}
+.mtable tr:nth-child(even) td{background:#f7fcf1}
+.mtable td.n{font-weight:900;color:var(--teal);width:22px}
+.mtable td b{color:var(--green-900)}
+.mtable td small{display:block;color:var(--muted);font-size:9.8px}
+.mtable tr{break-inside:avoid}
+.mtable td.nw{white-space:nowrap}
+.eff{display:inline-block;font-size:8.8px;font-weight:800;padding:1px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.4px}
+.eff.b{background:#e6f5ec;color:#1a5e36}
+.eff.m{background:#fbffd9;color:#5c6300;border:1px solid #dfe87a}
+.eff.a{background:var(--green-900);color:var(--lime)}
+
+/* ── reparto por destino ── */
+.dests{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;break-inside:avoid}
+.dest{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 11px 10px;display:flex;flex-direction:column;box-shadow:0 3px 12px rgba(7,102,83,.06)}
+.dest .d{margin:0;align-self:flex-start}
+.dest .dn2{font-size:12px;font-weight:850;color:var(--green-900);margin-top:6px;line-height:1.2}
+.dest .dv{font-size:26px;font-weight:900;color:var(--teal);line-height:1;margin:5px 0 2px}
+.dest .dv small{font-size:9.5px;color:var(--muted);font-weight:800;margin-left:3px;text-transform:uppercase;letter-spacing:.5px}
+.dest ul{margin:4px 0 7px 13px;flex:1}
+.dest li{font-size:10.5px;color:#33483f;line-height:1.35;margin-bottom:2px}
+.dest .dw{font-size:9.8px;color:var(--green-900);background:var(--green-100);border-radius:8px;padding:5px 7px;line-height:1.3;font-weight:650}
+
+/* ── calendario ── */
+.cal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;break-inside:avoid}
+.cday{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 11px;break-inside:avoid;border-top:3px solid var(--teal)}
+.cday.hl{border-top-color:var(--lime);background:linear-gradient(180deg,#fbffe9,#fff)}
+.cday .cdt{font-size:9.8px;text-transform:uppercase;letter-spacing:1px;color:var(--teal);font-weight:900}
+.cday p{font-size:11px;color:#33483f;margin-top:3px;line-height:1.38}
+
+/* ── días ── */
+.day{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:11px;
+  box-shadow:0 3px 12px rgba(7,102,83,.06);break-inside:avoid}
+.day-h{display:flex;align-items:center;gap:12px;padding:9px 15px;background:linear-gradient(135deg,var(--green-950),var(--teal));color:var(--cream)}
+.day-h .dn{font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--lime);font-weight:800}
+.day-h .dt{font-size:15.5px;font-weight:900;line-height:1.2}
+.day-h .th{margin-left:auto;font-size:10.5px;background:rgba(255,255,255,.10);border:1px solid rgba(227,239,38,.35);
+  border-radius:20px;padding:3px 11px;color:#eafbe0;white-space:nowrap}
+.slot{display:grid;grid-template-columns:16px 66px 1fr auto;gap:8px;align-items:start;padding:6px 15px;
+  border-top:1px solid var(--line);font-size:11.5px;color:#33483f;line-height:1.42}
+.slot.first{border-top:none}
+.slot .st{font-size:12.5px;line-height:1.25;color:var(--teal);font-weight:900}
+.slot .st.x{color:#9bb3a8}
+.slot .tm{font-weight:800;color:var(--green-900);font-size:10.8px}
+.slot .ds{text-align:right;white-space:nowrap}
+.slot b{color:var(--green-900)}
+
+/* ── episodios ── */
+.eps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ep{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;break-inside:avoid;
+  box-shadow:0 3px 12px rgba(7,102,83,.06)}
+.ep .eh{background:var(--teal);color:var(--cream);padding:8px 12px}
+.ep .eh .en{font-size:9.3px;letter-spacing:2px;color:var(--lime);font-weight:800;text-transform:uppercase}
+.ep .eh .et{font-size:14px;font-weight:900}
+.ep .eb{padding:10px 12px;font-size:11.2px;color:#33483f;line-height:1.45}
+.ep .eb p{margin-bottom:7px}
+.ep .eb .k{font-size:8.8px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:800;display:block;margin-bottom:1px}
+.ep .eb .hook{font-weight:800;color:var(--green-900)}
+
+/* ── guiones para copiar ── */
+.script{background:#fbffe9;border:1.5px dashed #c9d41a;border-radius:12px;padding:11px 15px;margin:4px 0 12px;break-inside:avoid}
+.script .sc{font-size:9.3px;letter-spacing:1.5px;text-transform:uppercase;color:#6b7300;font-weight:800;margin-bottom:5px}
+.script p{font-size:12.2px;color:#1f3a30;line-height:1.55}
+.script ol{margin-left:18px}
+.script ol li{font-size:11.8px;color:#1f3a30;margin-bottom:3px;line-height:1.45}
+
+/* ── callouts ── */
+.callout{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:12px;
+  padding:11px 15px;margin-bottom:12px;font-size:12px;color:#33483f;break-inside:avoid;line-height:1.5}
+.callout b{color:var(--green-900)}
+.callout.warn{background:#fcfee8;border-left-color:#c9d41a}
+.callout .ct{font-size:13px;font-weight:850;color:var(--green-900);margin-bottom:3px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+
+/* ── hallazgos numerados ── */
+.find{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 15px;
+  box-shadow:0 3px 12px rgba(7,102,83,.06);margin-bottom:10px;break-inside:avoid;display:flex;gap:13px;align-items:flex-start}
+.find .n{flex-shrink:0;width:30px;height:30px;border-radius:9px;background:var(--green-100);
+  color:var(--green-900);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+.find h3{font-size:13.8px;color:var(--green-900);font-weight:800;margin-bottom:2px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.find p{font-size:12.1px;color:#33483f;line-height:1.5}
+.find b{color:var(--teal)}
+.find .rec{margin-top:4px;font-size:11.8px;color:#2c463c}
+.find .rec b{color:var(--green-900)}
+
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.fgrid .find{margin-bottom:0}
+.fgrid .find.wide{grid-column:1 / -1}
+
+/* ── checklist ── */
+.chk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 13px;break-inside:avoid;
+  box-shadow:0 3px 12px rgba(7,102,83,.06)}
+.chk h4{font-size:10.8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);font-weight:900;margin-bottom:8px}
+.chk ul{list-style:none}
+.chk li{position:relative;padding-left:19px;font-size:11px;color:#33483f;margin-bottom:5px;line-height:1.38}
+.chk li::before{content:"";position:absolute;left:0;top:2px;width:10px;height:10px;border:2px solid var(--teal);border-radius:3px}
+
+.pill{display:inline-block;background:var(--green-100);color:var(--green-900);font-size:11px;font-weight:700;
+  padding:3px 11px;border-radius:20px;margin:2px 3px}
+.note{font-size:11px;color:var(--muted);font-style:italic;margin-top:8px;text-align:center}
+.src{font-size:9.6px;color:var(--muted);margin-top:10px;line-height:1.5;text-align:center}
+
+/* ── subtítulo dentro de sección ── */
+.subhead{display:flex;align-items:center;gap:9px;margin:16px 0 9px;font-size:15px;font-weight:850;color:var(--green-900);break-after:avoid}
+.subhead .sq{width:12px;height:12px;border-radius:4px;background:var(--lime);border:2px solid var(--teal);flex-shrink:0}
+
+/* ── cierre verde ── */
+.closing{background:linear-gradient(135deg,var(--green-950),var(--teal));color:var(--cream);
+  border:none;border-radius:18px;padding:22px 26px;box-shadow:0 14px 40px rgba(6,35,29,.26);break-inside:avoid;margin-top:16px}
+.closing h3{color:var(--lime);font-size:16px;font-weight:900;margin-bottom:8px}
+.closing p{color:#dff5ea;font-size:13.5px}
+.closing p b{color:var(--lime)}
+.closing .pills{margin-top:12px}
+.closing .pill{background:rgba(255,255,255,.10);color:#eafbe0;border:1px solid rgba(227,239,38,.30)}
+
+@media print{
+  body{background:#fff}
+  .hero,.closing,.card,.find,.mtable,.kpi,.tl,.day,.ep,.chk{box-shadow:none}
+}
+
+/* ── teléfono ── */
+.page{padding:16px 14px 40px}
+@media (max-width:640px){
+  .hero{padding:22px 18px}
+  .hero h1{font-size:28px}
+  .kpis,.grid2,.grid3,.tldr,.fgrid,.eps,.cal{grid-template-columns:1fr}
+  .dests{grid-template-columns:1fr 1fr}
+  .mtable{font-size:10.5px}
+}
+@media print{.page{padding:0}}
+</style>
+</head>
+<body>
+<div class="page">
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <div class="kicker">Guía de contenido · Viaje con Bosch</div>
+  <h1>Geral en <span>Brasil</span></h1>
+  <div class="school">🔧 Corfesa · octubre 2026</div>
+  <p class="sub">Lo único que necesitamos es que grabes muchos clips cortos de todo lo que vivas en el viaje. Con eso armamos el video. No tienes que editar nada, y hablar a cámara es opcional.</p>
+  <div class="hero-meta">
+    <span class="hm">✈️ <b>Sales el vie 2 oct</b></span>
+    <span class="hm">📱 <b>Todo con tu teléfono</b></span>
+    <span class="hm">🦾 <b>Magic arm = tu trípode</b></span>
+    <span class="hm">📤 <b>Mándalo cada noche</b></span>
+  </div>
+</div>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">1</div>
+    <div><h2>🎯 Para qué es esto</h2><div class="tag">el video que vamos a armar</div></div>
+  </div>
+  <div class="lead">Bosch invitó a Corfesa a Brasil. Bien contado, eso dice mucho sin decir nada: <b>estamos activos, la marca nos toma en cuenta y estamos más fuertes que nunca.</b> El video va a arrancar con una frase tipo “Bosch nos invitó a Brasil por…” (el motivo real lo definimos juntos). Tu trabajo es traer el material; del resto nos encargamos.</div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">2</div>
+    <div><h2>📱 Tu kit y cómo configurarlo</h2><div class="tag">antes de salir</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>🎒 Lo que llevas</h3><ul>
+      <li><b>Tu teléfono</b>, con al menos 20 GB libres.</li>
+      <li><b>Cargador y powerbank</b>: grabar gasta batería.</li>
+      <li><b>El magic arm con la montura de teléfono</b>: se agarra de mesas, barandas y respaldos de silla. Es tu trípode.</li>
+      <li><b>Un pañito</b> para limpiar el lente.</li>
+    </ul></div>
+    <div class="card"><h3>⚙️ La configuración</h3><ul>
+      <li><b>Siempre vertical.</b></li>
+      <li>Video en <b>4K a 30 fps</b>. Si te quedas sin espacio, 1080p a 30 fps.</li>
+      <li>Sin filtros, sin modo retrato, sin efectos.</li>
+      <li>La cámara principal del teléfono (la de atrás) se ve mejor que la de selfie.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">3</div>
+    <div><h2>🎬 7 reglas para que se vea bien</h2><div class="tag">con esto ya se ve bien</div></div>
+  </div>
+  <div class="fgrid">
+    <div class="find"><div class="n">1</div><div><h3>🧽 Limpia el lente</h3><p>Antes de cada momento importante. Un lente sucio hace ver todo borroso.</p></div></div>
+    <div class="find"><div class="n">2</div><div><h3>⏱️ 8 a 10 segundos por toma</h3><p>Quieta, sin mover el teléfono. Cuenta hasta diez y corta.</p></div></div>
+    <div class="find"><div class="n">3</div><div><h3>🐢 Si te mueves, lento</h3><p>Un solo movimiento, suave y en una dirección. Nada de ir de un lado a otro.</p></div></div>
+    <div class="find"><div class="n">4</div><div><h3>👆 Toca y deja el dedo</h3><p>Toca la pantalla donde quieres enfocar y mantén el dedo hasta que salga “bloqueo AE/AF”. Así no cambia la luz a mitad de la toma.</p></div></div>
+    <div class="find"><div class="n">5</div><div><h3>☀️ La luz, de frente o de lado</h3><p>Nunca con una ventana detrás de lo que grabas: sale oscuro.</p></div></div>
+    <div class="find"><div class="n">6</div><div><h3>🚶 Nada de zoom</h3><p>Si quieres algo más cerca, acércate tú.</p></div></div>
+    <div class="find wide"><div class="n">7</div><div><h3>🎞️ Graba más de lo que crees</h3><p>Lo que no se graba no existe. Es mejor tener 50 clips y usar 10 que tener 5 y que falten.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">4</div>
+    <div><h2>📋 Catálogo de tomas</h2><div class="tag">ideas por momento del viaje · no hace falta hacerlas todas</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>🧳 La salida</h3><ul>
+      <li>La maleta cerrándose.</li>
+      <li>Pasaporte y boleto en la mano (sin que se vean los datos).</li>
+      <li>El camino al aeropuerto por la ventana del carro.</li>
+    </ul></div>
+    <div class="card"><h3>✈️ Aeropuerto y avión</h3><ul>
+      <li>La pantalla de vuelos con el destino.</li>
+      <li>Caminando por el pasillo hacia la puerta de embarque.</li>
+      <li>La ventana al despegar, las nubes, el ala, el aterrizaje.</li>
+      <li>En migración y aduana no se graba: está prohibido.</li>
+    </ul></div>
+    <div class="card"><h3>🏙️ Llegada a Brasil</h3><ul>
+      <li>La ciudad desde el carro: calles, letreros en portugués.</li>
+      <li>La entrada del hotel.</li>
+      <li>Abriendo la puerta de la habitación y la vista desde la ventana.</li>
+    </ul></div>
+    <div class="card"><h3>🏢 El evento</h3><ul>
+      <li>La entrada con los logos de Bosch.</li>
+      <li>Tu credencial, con tu nombre y Corfesa.</li>
+      <li>Salones, stands, productos en exhibición y demostraciones.</li>
+      <li>Tú entrando (pídele a alguien que te grabe).</li>
+    </ul></div>
+    <div class="card"><h3>🎤 Las ponencias</h3><ul>
+      <li>El escenario desde atrás del público.</li>
+      <li>El ponente, solo si está permitido.</li>
+      <li>El público tomando notas, tus propias notas, los aplausos.</li>
+      <li>Pregunta primero si se puede grabar.</li>
+    </ul></div>
+    <div class="card"><h3>🍽️ Cenas y encuentros</h3><ul>
+      <li>La mesa servida y los platos, desde arriba.</li>
+      <li>El brindis, las risas, el lugar.</li>
+      <li>Tú con otros distribuidores (con su permiso).</li>
+    </ul></div>
+    <div class="card"><h3>🌆 Tiempo libre</h3><ul>
+      <li>Paseos, un café, la playa o la ciudad, el atardecer.</li>
+      <li>Cualquier cosa que te llame la atención: si te gusta a ti, grábala.</li>
+    </ul></div>
+    <div class="card"><h3>🔁 El regreso</h3><ul>
+      <li>La maleta otra vez, el aeropuerto, la ventana del avión.</li>
+      <li>Lo que traes de vuelta (material, regalos, la credencial).</li>
+    </ul></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🤳 Frases a cámara (opcional)</h3>
+      <p>Cortas, de 5 a 10 segundos, en un sitio tranquilo. Dilas 2 o 3 veces y nos quedamos con la mejor.</p>
+      <ul>
+        <li>“Estamos en Brasil con Bosch.”</li>
+        <li>“Día 1: esto es lo que hay aquí.”</li>
+        <li>“Lo que más me sorprendió hoy fue…”</li>
+        <li>“De vuelta a Venezuela con…”</li>
+      </ul>
+    </div>
+    <div class="card"><h3>📸 Fotos</h3><ul>
+      <li>Con el logo de Bosch.</li>
+      <li>La foto de grupo.</li>
+      <li>Tu credencial.</li>
+      <li>Si subes historias a @corfesa en vivo, perfecto, pero guarda igual el video original en el teléfono.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">5</div>
+    <div><h2>🚫 Lo que no se graba</h2><div class="tag">para no meternos en problemas</div></div>
+  </div>
+  <div class="callout warn">
+    <b>Migración y aduana</b>: ahí no se graba. · <b>Productos que todavía no se han lanzado</b> o presentaciones internas: pregunta antes de grabarlas, y si te dicen que no se publican, no se publican. · <b>Gente en primer plano</b> sin su permiso. · Pantallas o papeles con <b>datos, precios o números internos</b>.
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">6</div>
+    <div><h2>📤 Cómo me lo mandas</h2><div class="tag">cada noche, sin perder calidad</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>✅ Así sí</h3><ul>
+      <li>A la <b>carpeta de Google Drive</b> que te comparto, una subcarpeta por día (Día 1, Día 2…).</li>
+      <li>O por WhatsApp, pero <b>como “Documento”</b>, no como video.</li>
+    </ul></div>
+    <div class="card"><h3>❌ Así no</h3><ul>
+      <li>Por WhatsApp como video normal: lo comprime y pierde calidad.</li>
+      <li>No borres nada del teléfono hasta que te confirme que llegó.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <div class="sec-num">7</div>
+    <div><h2>⭐ El mínimo por día</h2><div class="tag">si solo haces esto, ya ganamos</div></div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>📍 1 toma</h3><p>Llegando al lugar del día.</p></div>
+    <div class="card"><h3>🏢 3 tomas</h3><p>Del evento: entrada, stands o ponencias.</p></div>
+    <div class="card"><h3>🍽️ 1 toma</h3><p>De la comida o la cena.</p></div>
+    <div class="card"><h3>🙋 1 toma tuya</h3><p>Que alguien te grabe caminando, conversando o entrando.</p></div>
+    <div class="card"><h3>🤳 1 frase</h3><p>A cámara, opcional.</p></div>
+    <div class="card"><h3>📤 Y mandarlo</h3><p>Antes de dormir.</p></div>
+  </div>
+
+  <div class="sec-head" style="margin-top:22px">
+    <div class="sec-num">8</div>
+    <div><h2>🗓️ Tu cronograma</h2><div class="tag">pásamelo y te marco qué grabar en cada bloque</div></div>
+  </div>
+  <table class="mtable">
+    <thead><tr><th style="width:18%">Día</th><th style="width:38%">Qué hay ese día</th><th>Qué grabar</th></tr></thead>
+    <tbody>
+      <tr><td><b>Día 1</b><small>viaje</small></td><td>&nbsp;<br>&nbsp;</td><td>Salida, aeropuerto, avión, llegada.</td></tr>
+      <tr><td><b>Día 2</b></td><td>&nbsp;<br>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td><b>Día 3</b></td><td>&nbsp;<br>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td><b>Día 4</b></td><td>&nbsp;<br>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr><td><b>Regreso</b></td><td>&nbsp;<br>&nbsp;</td><td>Maleta, aeropuerto, lo que traes de vuelta.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="closing">
+    <h3>✨ Lo más importante</h3>
+    <p>No tienes que ser creadora de contenido: <b>solo tienes que grabar lo que ya vas a vivir.</b> Tomas cortas, quietas, con el lente limpio y en vertical. Con eso contamos que Corfesa estuvo en Brasil con Bosch.</p>
+    <div class="pills">
+      <span class="pill">Vertical</span>
+      <span class="pill">8 a 10 s por toma</span>
+      <span class="pill">Lente limpio</span>
+      <span class="pill">Mándalo cada noche</span>
+    </div>
+  </div>
+  <p class="note">Guía de contenido · Geral en Brasil con Bosch · Corfesa · V1 · 30 sep 2026</p>
+</section>
+
+</div>
+</body>
+</html>
